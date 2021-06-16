@@ -34,5 +34,12 @@ var studenti = [
     }
 ];
 
-console.log(studenti)
+// Ora si cicla all'interno della array e oggetti per prendere fuori la descrizione
+// per farla modificare dall'utente:
+var str = '';
 
+for (var i = 0; i < studenti.length; i++) {
+    var description = prompt('Inserisci la descrizione dello studente');
+    studenti[i].descrizione += description
+}
+console.log(studenti);
