@@ -40,6 +40,12 @@ var str = '';
 
 for (var i = 0; i < studenti.length; i++) {
     var description = prompt('Inserisci la descrizione dello studente');
-    studenti[i].descrizione += description
+    var des = studenti[i].descrizione += description;
+    // Per stampare a video in HTML serve un for in:
+
+    for (var key in studenti[i]) {
+        console.log(key, studenti[i][key]);
+        document.getElementById('result').innerHTML += '<li>' + key, studenti[i][key] + ' ' + des + '<li>';
+    }
 }
-console.log(studenti);
+
