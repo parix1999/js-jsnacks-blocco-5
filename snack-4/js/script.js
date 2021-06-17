@@ -36,7 +36,7 @@ var studenti = [
 
 // Ora si cicla all'interno della array e oggetti per prendere fuori la descrizione
 // per farla modificare dall'utente:
-var str = '';
+
 
 for (var i = 0; i < studenti.length; i++) {
     var thisStudent = studenti[i];
@@ -47,7 +47,8 @@ for (var i = 0; i < studenti.length; i++) {
 
     for (var key in studenti[i]) {
         console.log(key, studenti[i][key]);
-        document.getElementById('result').innerHTML += '<li>' + key + ' ' + studenti[i][key] + '</li>';
+        // document.getElementById('result').innerHTML += '<li>' + key + ' ' + studenti[i][key] + '</li>';
+        document.getElementById('result').innerHTML += `<li> ${key} ${studenti[i][key]} </li>`;
     }
 }
 
