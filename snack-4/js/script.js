@@ -39,7 +39,9 @@ var studenti = [
 var str = '';
 
 for (var i = 0; i < studenti.length; i++) {
-    var description = prompt('Inserisci la descrizione dello studente');
+    var thisStudent = studenti[i];
+    var thisNameSurname = thisStudent.nome + ' ' +  thisStudent.cognome;
+    var description = prompt('Inserisci la descrizione dello studente' + ' ' + thisNameSurname);
     studenti[i].descrizione = description;
     // Per stampare a video in HTML serve un for in:
 
